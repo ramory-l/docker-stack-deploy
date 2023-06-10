@@ -1,7 +1,7 @@
 
-name: 'Docker Stack Deploy Action'
+name: 'Docker Stack Deploy Action With Env'
 description: 'Deploy a Docker stack on a Docker Swarm'
-author: 'kitconcept GmbH'
+author: 'ramory-l'
 branding:
   icon: 'truck'
   color: 'red'
@@ -55,7 +55,7 @@ inputs:
     default: "0"
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/kitconcept/docker-stack-deploy:latest'
+  image: 'docker://ghcr.io/ramory-l/docker-stack-deploy:latest'
   env:
     REGISTRY: ${{ inputs.registry }}
     USERNAME: ${{ inputs.username }}
