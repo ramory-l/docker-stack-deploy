@@ -9,7 +9,7 @@ MAKEFLAGS+=--warn-undefined-variables
 MAKEFLAGS+=--no-builtin-rules
 
 BASE_NAME=docker-stack-deploy
-IMAGE_NAME=ghcr.io/kitconcept/$(BASE_NAME)
+IMAGE_NAME=ghcr.io/ramory-l/$(BASE_NAME)
 
 # We like colors
 # From: https://coderwall.com/p/izxssa/colored-makefile-for-golang-projects

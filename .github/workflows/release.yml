@@ -3,19 +3,17 @@ name: Release Image
 on:
   push:
     branches:
-      - 'main'
+      - "main"
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
 env:
-  IMAGE_NAME: ghcr.io/kitconcept/docker-stack-deploy
+  IMAGE_NAME: ghcr.io/ramory-l/docker-stack-deploy
 
 jobs:
-
   release:
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -45,7 +43,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.MY_TOKEN }}
 
       - name: Build and push
         uses: docker/build-push-action@v3
